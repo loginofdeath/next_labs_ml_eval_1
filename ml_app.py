@@ -66,10 +66,10 @@ my_dict={
     'DaysSinceLastStay':days_last
     
     }
-scaler=load_file('C:\\Users\\soura\\.spyder-py3\\scaler_final')
-ohe=load_file('C:\\Users\\soura\\.spyder-py3\\ohe_final')
-cyclical=load_file('C:\\Users\\soura\\.spyder-py3\\cylical_final')
-model=load_model('C:\\Users\\soura\\.spyder-py3\\model.h5')
+scaler=load_file('scaler_final')
+ohe=load_file('ohe_final')
+cyclical=load_file('cylical_final')
+model=load_model('model.h5')
 def predict(test):
     test_1=ohe.transform(test)
     test_2=cyclical.transform(test_1)
