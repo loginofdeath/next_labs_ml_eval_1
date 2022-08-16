@@ -16,46 +16,27 @@ def load_file(filename):
 st.title('Predicting whether customer will get checked in ')
 age=st.number_input('Enter age of customer')
 nationality=st.text_input("Enter nationality of customer","")
-srking=st.text_input("Enter SRKingBed for customer")
 dist_ch=st.text_input("Enter distribution channel of customer")
 days_creat=st.number_input("Enter days since creation for customer")
 avg_lead=st.number_input("Enter average lead time of customer")
 room_night=st.number_input("Enter roomnights of customer")
 person_night=st.number_input("Enter personnights of customer")
-days_first=st.number_input("Enter DaysSinceFirstStay for customer")
 lodging_rev=st.number_input("Enter lodging revenue for customer")
 mrkt_seg=st.text_input("Enter market_segment of customer")
 other_rev=st.number_input("Enter other revenue for customer")
 days_last=st.number_input("Enter DaysSinceLastStay for customer")
 
-top_features=['DaysSinceFirstStay',
- 'RoomNights',
- 'PersonsNights',
- 'DaysSinceLastStay',
- 'OtherRevenue',
- 'LodgingRevenue',
- 'AverageLeadTime',
- 'Age',
- 'MarketSegment_2',
- 'DistributionChannel_2',
- 'DaysSinceCreation',
- 'DaysSinceCreation_cos',
- 'DaysSinceCreation_sin',
- 'MarketSegment_3',
- 'DistributionChannel_1',
- 'SRKingSizeBed',
- 'MarketSegment_6',
- 'DistributionChannel_3',
- 'Nationality_18',
- 'Nationality_48',
- 'Nationality_2']
+top_features=['RoomNights', 'DaysSinceLastStay', 'OtherRevenue', 'AverageLeadTime',
+       'LodgingRevenue', 'PersonsNights', 'Age', 'DaysSinceCreation',
+       'MarketSegment_6', 'DistributionChannel_2', 'Nationality_27',
+       'DaysSinceCreation_sin', 'DaysSinceCreation_cos', 'Nationality_2',
+       'DistributionChannel_1', 'MarketSegment_1', 'Nationality_6',
+       'Nationality_14', 'Nationality_11']
 
 my_dict={
     'Age':age, 
     'Nationality':nationality, 
-    'SRKingSizeBed':srking, 
     'DistributionChannel':dist_ch,
-    'DaysSinceFirstStay':days_first, 
     'DaysSinceCreation':days_creat, 
     'RoomNights':room_night,
     'PersonsNights':person_night, 
